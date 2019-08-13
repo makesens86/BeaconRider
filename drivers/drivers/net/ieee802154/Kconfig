@@ -1,33 +1,82 @@
-menuconfig IEEE802154
-	depends on !KERNEL_3_19
-	tristate "IEEE Std 802.15.4 Low-Rate Wireless Personal Area Networks support"
+menuconfig IEEE802154_DRIVERS
+	tristate "IEEE 802.15.4 drivers"
 	depends on m
-	---help---
-	  IEEE Std 802.15.4 defines a low data rate, low power and low
-	  complexity short range wireless personal area networks. It was
-	  designed to organise networks of sensors, switches, etc automation
-	  devices. Maximum allowed data rate is 250 kb/s and typical personal
-	  operating space around 10m.
-
-	  Say Y here to compile LR-WPAN support into the kernel or say M to
-	  compile it as modules.
-
-if IEEE802154
-
-config IEEE802154_NL802154_EXPERIMENTAL
-	bool "IEEE 802.15.4 experimental netlink support"
-	---help---
-	  Adds experimental netlink support for nl802154.
-
-config IEEE802154_SOCKET
-	tristate "IEEE 802.15.4 socket interface"
-	depends on m
+	depends on NETDEVICES && IEEE802154
 	default y
 	---help---
-	  Socket interface for IEEE 802.15.4. Contains DGRAM sockets interface
-	  for 802.15.4 dataframes. Also RAW socket interface to build MAC
-	  header from userspace.
+	  Say Y here to get to see options for IEEE 802.15.4 Low-Rate
+	  Wireless Personal Area Network device drivers. This option alone
+	  does not add any kernel code.
 
-source "net/ieee802154/6lowpan/Kconfig"
+	  If you say N, all options in this submenu will be skipped and
+	  disabled.
 
-endif
+config IEEE802154_FAKELB
+	depends on IEEE802154_DRIVERS && MAC802154
+	tristate "IEEE 802.15.4 loopback driver"
+	depends on m
+	---help---
+	  Say Y here to enable the fake driver that can emulate a net
+	  of several interconnected radio devices.
+
+	  This driver can also be built as a module. To do so say M here.
+	  The module will be called 'fakelb'.
+
+config IEEE802154_AT86RF230
+	depends on !KERNEL_3_4
+	depends on IEEE802154_DRIVERS && MAC802154
+	tristate "AT86RF230/231/233/212 transceiver driver"
+	depends on m
+	depends on SPI
+	depends on REGMAP_SPI
+	---help---
+	  Say Y here to enable the at86rf230/231/233/212 SPI 802.15.4 wireless
+	  controller.
+
+	  This driver can also be built as a module. To do so, say M here.
+	  the module will be called 'at86rf230'.
+
+config IEEE802154_AT86RF230_DEBUGFS
+	depends on IEEE802154_AT86RF230
+	bool "AT86RF230 debugfs interface"
+	depends on DEBUG_FS
+	---help---
+	  This option compiles debugfs code for the at86rf230 driver.
+
+config IEEE802154_MRF24J40
+	depends on !KERNEL_3_5
+	tristate "Microchip MRF24J40 transceiver driver"
+	depends on m
+	depends on IEEE802154_DRIVERS && MAC802154
+	depends on SPI
+	depends on REGMAP_SPI
+	---help---
+	  Say Y here to enable the MRF24J20 SPI 802.15.4 wireless
+	  controller.
+
+	  This driver can also be built as a module. To do so, say M here.
+	  the module will be called 'mrf24j40'.
+
+config IEEE802154_CC2520
+	depends on !KERNEL_3_5
+	depends on IEEE802154_DRIVERS && MAC802154
+	tristate "CC2520 transceiver driver"
+	depends on m
+	depends on SPI
+	---help---
+	  Say Y here to enable the CC2520 SPI 802.15.4 wireless
+	  controller.
+
+	  This driver can also be built as a module. To do so, say M here.
+	  the module will be called 'cc2520'.
+
+config IEEE802154_ATUSB
+	tristate "ATUSB transceiver driver"
+	depends on m
+	depends on IEEE802154_DRIVERS && MAC802154 && USB
+	---help---
+	  Say Y here to enable the ATUSB IEEE 802.15.4 wireless
+	  controller.
+
+	  This driver can also be built as a module. To do so say M here.
+	  The module will be called 'atusb'.

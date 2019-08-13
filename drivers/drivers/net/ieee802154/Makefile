@@ -1,11 +1,5 @@
-obj-$(CPTCFG_IEEE802154) += ieee802154.o
-obj-$(CPTCFG_IEEE802154_SOCKET) += ieee802154_socket.o
-obj-y += 6lowpan/
-
-ieee802154-y := netlink.o nl-mac.o nl-phy.o nl_policy.o core.o \
-                header_ops.o sysfs.o nl802154.o trace.o
-ieee802154_socket-y := socket.o
-
-CFLAGS_trace.o := -I$(src)
-
-ccflags-y += -D__CHECK_ENDIAN__
+obj-$(CPTCFG_IEEE802154_FAKELB) += fakelb.o
+obj-$(CPTCFG_IEEE802154_AT86RF230) += at86rf230.o
+obj-$(CPTCFG_IEEE802154_MRF24J40) += mrf24j40.o
+obj-$(CPTCFG_IEEE802154_CC2520) += cc2520.o
+obj-$(CPTCFG_IEEE802154_ATUSB) += atusb.o
