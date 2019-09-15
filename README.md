@@ -24,6 +24,29 @@ We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_deb
 
 *BeaconRider* operations are implemented in *target_firmware/wlan* (*This is where you want to modify firmware for your own research!*). Please refer to *beaconRider.c* and *beaconRider.h* for detailed operations.
 
+
+# How to build linux kernel backports
+1. Download backports source code from [here](http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/)
+
+2. Set compile options
+```
+sudo make mrproper
+sudo make defconfig-ath9k
+sudo make defconfig-ath9k-debug
+```
+3. Compile
+```
+sudo make && make install
+```
+4. Replace the new modules with the old ones. 
+```
+modprobe -r ath9k
+modprobe -r ath9k_htc
+modprobe ath9k
+modprobe ath9k_htc
+```
+If you have an issue reinstalling new modules, reboot your system. 
+
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
 
