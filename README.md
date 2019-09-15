@@ -7,7 +7,7 @@
 # *BeaconRider*
 [*BeaconRider*](http://network.snu.ac.kr:14259/webdav/hp_publications/paper/BeaconRider_icnp2019_hjlee.pdf) is an opportunistic air-time sharing scheme that enables simultaneous data and beacon transmissions aimed at improving spectrum efficiency in dense network environments. If you reference our work, please refer to the following paper information. 
 
-Hyunjoong Lee, Jungjun Kim, Changhee Joo, and Saewoong Bahk, "BeaconRider: Opportunistic Sharing of Beacon Air-Time in Densely Deployed WLANs," in Proc. in *IEEE ICNP 2019*, Chicago, USA, Oct. 7-10, 2019.
+**Hyunjoong Lee, Jungjun Kim, Changhee Joo, and Saewoong Bahk, "BeaconRider: Opportunistic Sharing of Beacon Air-Time in Densely Deployed WLANs," in Proc. in *IEEE ICNP 2019*, Chicago, USA, Oct. 7-10, 2019.**
 
 We provide the source codes (device driver and firmware codes) of BeaconRider. It has been tested under following environments. 
 
@@ -32,17 +32,17 @@ We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_deb
 
 
 # How to build linux kernel backports
-1. Download backports source code from [here](http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/)
+1. Download backports source code from [here](http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/).
 
 Go to the root directory of the source code. 
 
-2. Set compile options
+2. Set compile options.
 ```
 sudo make mrproper
 sudo make defconfig-ath9k
 sudo make defconfig-ath9k-debug
 ```
-3. Compile
+3. Initiate compilation.
 ```
 sudo make && make install
 ```
@@ -66,9 +66,9 @@ cd ./open-ath9k-htc-firmware
 make toolchain
 ```
 
-3. Building firmware
+3. Initiate building firmware.
 
-To enable BeaconRider on your devices, replace *target_firmware* directory with our firmware source codes. Then, you are good to go to initiate building firmware!.
+To enable BeaconRider on your devices, replace *target_firmware* directory with our firmware source codes. Then, you are good to go to initiate building firmware!
 ```
 sudo apt-get install cmake
 make -C target_firmware
