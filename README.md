@@ -15,6 +15,9 @@ If you have any questions, feel free to contact us.
 
 - E-mail: hjlee@netlab.snu.ac.kr 
 
+# Source code description
+Most of *BeaconRider* operations are implemented in ath9k-htc firmware. 
+
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
 
