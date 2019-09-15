@@ -17,8 +17,10 @@ If you have any questions, feel free to contact us.
 
 # Source code description
 - *drivers*: Linux kernel driver
-Most of *BeaconRider* operations are implemented in ath9k-htc firmware (beaconRider-ath9k-htc-firmware/target_firmware/wlan). 
+We modified only few parts in linux kernel for debugfs operations (i.e., *htc_drv_debug.c*, *hw.h*, and *hw.c*) and received beacon counting (*recv.c*). Most of *BeaconRider* operations are implemented in *ath9k-htc* firmware. 
+
 - *target_firmware*: ath9k-htc firmware
+*BeaconRider* operations are implemented in beaconRider-ath9k-htc-firmware/target_firmware/wlan. Please refer to *beaconRider.c* and *beaconRider.h*. 
 
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
