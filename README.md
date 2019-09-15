@@ -14,4 +14,5 @@ If you have any questions, feel free to contact us.
 
 - E-mail: hjlee@netlab.snu.ac.kr 
 
+# How to compile firmware
 
