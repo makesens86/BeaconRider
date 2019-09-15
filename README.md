@@ -22,7 +22,7 @@ We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_deb
 
 - ***target_firmware***: ath9k-htc firmware
 
-*BeaconRider* operations are implemented in beaconRider-ath9k-htc-firmware/target_firmware/wlan (*This is where you want to modify firmware for your own research!*). Please refer to *beaconRider.c* and *beaconRider.h* for detailed operations.  
+*BeaconRider* operations are implemented in *beaconRider-ath9k-htc-firmware/target_firmware/wlan* (*This is where you want to modify firmware for your own research!*). Please refer to *beaconRider.c* and *beaconRider.h* for detailed operations.  
 
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
