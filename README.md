@@ -15,7 +15,7 @@ If you have any questions, feel free to contact us.
 
 - E-mail: hjlee@netlab.snu.ac.kr 
 
-# How to build ath9k-htc firmware
+# How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
 
 ```git clone https://github.com/qca/open-ath9k-htc-firmware```
@@ -39,3 +39,4 @@ sudo cp target_firmware/htc_9271.fw /lib/firmware/ath9k_htc/htc_9271-1.4.0.fw
 sudo rmmod ath9k_htc
 sudo modprobe ath9k_htc
 ```
+If you have an issue reinstalling new kernel module, reboot your system. 
