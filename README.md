@@ -9,20 +9,20 @@ We provide the source codes (device driver and firmware codes) of BeaconRider. I
 - AP installation: [*hostapd-2.7*](https://w1.fi/hostapd/)
 - Device driver: [Linux Kernel Backports 4.2.6-1, *ath9k*](http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/)
 - Device firmware: [*ath9k-htc*](https://github.com/makesens86/open-ath9k-htc-firmware)
-- Tested device: [TP-Link WN722N version 1 (v1)](https://wikidevi.com/wiki/TP-LINK_TL-WN722N): Note that the newer versions (v2 and v3) is not compatible with BeaconRider because it no longer uses an atheros chipset. Make sure that you to buy the v1 version. 
+- Tested device: [TP-Link WN722N version 1 (v1)](https://wikidevi.com/wiki/TP-LINK_TL-WN722N). Note that the newer versions (v2 and v3) are not compatible with BeaconRider because they use *Realtek* chipset instead of *Atheros* chipset. Make sure that you to buy the v1 version. 
 
 If you have any questions, feel free to contact us. 
 
 - E-mail: hjlee@netlab.snu.ac.kr 
 
 # Source code description
-- *drivers*: Linux kernel driver
+- ***drivers***: Linux kernel driver
 
-We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_debug.c*, *hw.h*, and *hw.c*) and received beacon counting (*recv.c*). Most of *BeaconRider* operations are implemented in *ath9k-htc* firmware. 
+We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_debug.c*, *hw.h*, and *hw.c*) and counting the number of received beacons (i.e., *recv.c*). Most of *BeaconRider* operations are implemented in *ath9k-htc* firmware. 
 
-- *target_firmware*: ath9k-htc firmware
+- ***target_firmware***: ath9k-htc firmware
 
-*BeaconRider* operations are implemented in beaconRider-ath9k-htc-firmware/target_firmware/wlan. Please refer to *beaconRider.c* and *beaconRider.h*. 
+*BeaconRider* operations are implemented in beaconRider-ath9k-htc-firmware/target_firmware/wlan (*This is where you want to modify firmware for your own research!*). Please refer to *beaconRider.c* and *beaconRider.h* for detailed operations.  
 
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
