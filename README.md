@@ -1,6 +1,6 @@
 # Table of Contents
 - [Introduction](#BeaconRider)
-- [Source code description](# Source code description)
+- [Source code description](# Source-code-description)
 - [How to build linux kernel backports](# How to build linux kernel backports)
 - [How to build *ath9k-htc* firmware](# How to build *ath9k-htc* firmware)
 
