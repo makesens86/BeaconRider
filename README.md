@@ -1,3 +1,9 @@
+# Table of Contents
+- Introduction
+- Source code description
+- How to build linux kernel backports
+- How to build *ath9k-htc* firmware
+
 # *BeaconRider*
 [*BeaconRider*](http://network.snu.ac.kr:14259/webdav/hp_publications/paper/BeaconRider_icnp2019_hjlee.pdf) is an opportunistic air-time sharing scheme that enables simultaneous data and beacon transmissions aimed at improving spectrum efficiency in dense network environments. If you reference our work, please refer to the following paper information. 
 
@@ -27,6 +33,7 @@ We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_deb
 
 # How to build linux kernel backports
 1. Download backports source code from [here](http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/)
+
 Go to the root directory of the source code. 
 
 2. Set compile options
