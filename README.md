@@ -8,6 +8,7 @@ We provide the source codes (device driver and firmware codes) of BeaconRider. I
 
 
 If you have any questions, feel free to contact us. 
-e-mail: hjlee@netlab.snu.ac.kr 
+
+E-mail: hjlee@netlab.snu.ac.kr 
 
 
