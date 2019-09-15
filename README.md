@@ -6,8 +6,8 @@ Hyunjoong Lee, Jungjun Kim, Changhee Joo, and Saewoong Bahk, "BeaconRider: Oppor
 We provide the source codes (device driver and firmware codes) of BeaconRider. It has been tested under following development environments. 
 
 - OS: Ubuntu 14.04
-- Device Driver: Linux Kernel Backports 4.2.6, ath9k
-- Device firmware: [ath9k-htc](https://github.com/makesens86/open-ath9k-htc-firmware)
+- Device Driver: Linux Kernel Backports 4.2.6, *ath9k*
+- Device firmware: [*ath9k-htc*](https://github.com/makesens86/open-ath9k-htc-firmware)
 - Tested Device: [TP-Link WN722N version 1 (v1)](https://wikidevi.com/wiki/TP-LINK_TL-WN722N): Note that the newer versions (v2 and v3) is not compatible with BeaconRider because it no longer uses an atheros chipset. Make sure that you to buy the v1 version. 
 
 If you have any questions, feel free to contact us. 
