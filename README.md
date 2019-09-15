@@ -36,7 +36,8 @@ make toolchain
 ```
 
 3. Building firmware
-To enable BeaconRider on your devices, replace *target_firmware* directory with our firmware source codes. Then, you are good to go to initiate building firmware!. 
+
+To enable BeaconRider on your devices, replace *target_firmware* directory with our firmware source codes. Then, you are good to go to initiate building firmware!.
 ```
 sudo apt-get install cmake
 make -C target_firmware
