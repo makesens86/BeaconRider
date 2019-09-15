@@ -22,7 +22,7 @@ We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_deb
 
 - ***target_firmware***: ath9k-htc firmware
 
-*BeaconRider* operations are implemented in *beaconRider-ath9k-htc-firmware/target_firmware/wlan* (*This is where you want to modify firmware for your own research!*). Please refer to *beaconRider.c* and *beaconRider.h* for detailed operations.  
+*BeaconRider* operations are implemented in *target_firmware/wlan* (*This is where you want to modify firmware for your own research!*). Please refer to *beaconRider.c* and *beaconRider.h* for detailed operations.
 
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
@@ -36,11 +36,12 @@ make toolchain
 ```
 
 3. Building firmware
+To enable BeaconRider on your devices, replace *target_firmware* directory with our firmware source codes. Then, you are good to go to initiate building firmware!. 
 ```
 sudo apt-get install cmake
 make -C target_firmware
 ```
-If you can find *htc_9271.fw* in open-ath9k-htc-firmware/target_firmware, the building is successful.
+If you can find *htc_9271.fw* in *target_firmware* directory, the building is successful.
 
 4. Replace the new firmware with the old one. Remove old kernel module (*ath9k-htc*) and reinstall new one. 
 ```
