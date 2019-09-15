@@ -27,6 +27,7 @@ We modified few parts in linux kernel for debugfs operations (i.e., *htc_drv_deb
 
 # How to build linux kernel backports
 1. Download backports source code from [here](http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/)
+Go to the root directory of the source code. 
 
 2. Set compile options
 ```
