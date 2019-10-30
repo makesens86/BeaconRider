@@ -58,7 +58,9 @@ If you have an issue reinstalling new modules, reboot your system.
 # How to build *ath9k-htc* firmware
 1. Download firmware source code from [here](https://github.com/makesens86/open-ath9k-htc-firmware).
 
-```git clone https://github.com/qca/open-ath9k-htc-firmware```
+```
+git clone https://github.com/qca/open-ath9k-htc-firmware
+```
 
 2. Download and install *toolchain* using *make* command. (It will take about half an hour to be completed.)
 ```
